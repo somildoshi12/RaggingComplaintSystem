@@ -33,7 +33,7 @@ public class MainActivity4 extends AppCompatActivity {
 
                 selectedRadioButton = radioGroup.findViewById(radioGroup.getCheckedRadioButtonId());
 
-                Intent intent = new Intent(MainActivity4.this,MainActivity5.class);
+                Intent intent = new Intent(MainActivity4.this,MainActivity8.class);
                 startActivity(intent);
             }
         });
