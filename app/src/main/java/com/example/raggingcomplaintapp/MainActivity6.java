@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity6 extends AppCompatActivity {
-    Button btn_logout,btn_complaint;
+    Button btn_logout,btn_complaint,btn_status;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,15 @@ public class MainActivity6 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity6.this,MainActivity5.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_status = findViewById(R.id.button9);
+        btn_status.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity6.this,MainActivity7.class);
                 startActivity(intent);
             }
         });
