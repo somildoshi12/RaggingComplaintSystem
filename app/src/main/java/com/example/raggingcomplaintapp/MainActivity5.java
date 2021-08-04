@@ -6,21 +6,40 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity5 extends AppCompatActivity {
 
     Button btn;
+    EditText college,date,location,complaint;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main5);
 
+        //fetch data
+        college = findViewById(R.id.editTextTextPersonName3);
+        date = findViewById(R.id.editTextTextPersonName8);
+        location = findViewById(R.id.editTextTextPersonName12);
+        complaint = findViewById(R.id.editTextTextPersonName11);
+
         btn = findViewById(R.id.button10);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                //Fetching data
+                String college1 = college.getText().toString();
+                String date1 = date.getText().toString();
+                String location1 = location.getText().toString();
+                String complaint1 = complaint.getText().toString();
+
                 Intent intent = new Intent(MainActivity5.this,MainActivity6.class);
+                intent.putExtra("keyCollege",college1);
+                intent.putExtra("keyDate",date1);
+                intent.putExtra("keyLocation",location1);
+                intent.putExtra("keyComplaint",complaint1);
                 startActivity(intent);
             }
         });

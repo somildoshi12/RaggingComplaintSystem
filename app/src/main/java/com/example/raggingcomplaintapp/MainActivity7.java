@@ -13,13 +13,23 @@ import android.widget.TextView;
 public class MainActivity7 extends AppCompatActivity {
 
     Button dash,web;
-    TextView complaint;
-    String str = "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh";
+    TextView complaint,name0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main7);
+
+        name0 = findViewById(R.id.textView28);
+
+        //getting data
+        String name = getIntent().getStringExtra("keyName");
+        String surname = getIntent().getStringExtra("keySurname");
+        name0.setText(name+" "+surname);
+        String college1 = getIntent().getStringExtra("keyCollege");
+        String date1 = getIntent().getStringExtra("keyDate");
+        String location1 = getIntent().getStringExtra("keyLocation");
+        String complaint1 = getIntent().getStringExtra("keyComplaint");
 
         dash = findViewById(R.id.button12);
         web = findViewById(R.id.button13);
@@ -42,7 +52,7 @@ public class MainActivity7 extends AppCompatActivity {
 
         complaint = findViewById(R.id.textView39);
         complaint.setMovementMethod(new ScrollingMovementMethod());
-        complaint.setText(str);
+        //complaint.setText(str);
 
     }
 }
