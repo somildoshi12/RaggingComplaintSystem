@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class MainActivity7 extends AppCompatActivity {
 
     Button dash,web;
-    TextView complaint,name0;
+    TextView complaint,name0,date0,college0,location0,phone0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,15 +21,29 @@ public class MainActivity7 extends AppCompatActivity {
         setContentView(R.layout.activity_main7);
 
         name0 = findViewById(R.id.textView28);
+        date0 = findViewById(R.id.textView35);
+        college0 = findViewById(R.id.textView33);
+        location0 = findViewById(R.id.textView37);
+        //complaint0 = findViewById(R.id.textView39);
+        phone0 = findViewById(R.id.textView30);
 
         //getting data
         String name = getIntent().getStringExtra("keyName");
         String surname = getIntent().getStringExtra("keySurname");
         name0.setText(name+" "+surname);
+        //String complaint1 = getIntent().getStringExtra("keyComplaint");
+        /*String email = getIntent().getStringExtra("keyEmail");
+        String password = getIntent().getStringExtra("keyPassword");*/
+        String phone = getIntent().getStringExtra("keyPhone");
+        phone0.setText(phone);
         String college1 = getIntent().getStringExtra("keyCollege");
+        college0.setText(college1);
         String date1 = getIntent().getStringExtra("keyDate");
+        date0.setText(date1);
         String location1 = getIntent().getStringExtra("keyLocation");
+        location0.setText(location1);
         String complaint1 = getIntent().getStringExtra("keyComplaint");
+
 
         dash = findViewById(R.id.button12);
         web = findViewById(R.id.button13);
@@ -52,7 +66,7 @@ public class MainActivity7 extends AppCompatActivity {
 
         complaint = findViewById(R.id.textView39);
         complaint.setMovementMethod(new ScrollingMovementMethod());
-        //complaint.setText(str);
+        complaint.setText(complaint1);
 
     }
 }

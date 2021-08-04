@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity5 extends AppCompatActivity {
 
@@ -34,12 +35,28 @@ public class MainActivity5 extends AppCompatActivity {
                 String date1 = date.getText().toString();
                 String location1 = location.getText().toString();
                 String complaint1 = complaint.getText().toString();
+                String name = getIntent().getStringExtra("keyName");
+                String surname = getIntent().getStringExtra("keySurname");
+                String email = getIntent().getStringExtra("keyEmail");
+                String password = getIntent().getStringExtra("keyPassword");
+                String phone = getIntent().getStringExtra("keyPhone");
+
+                //test
+                if(date1.equals("test")==true && location1.equals("test")==true && college1.equals("test")==true){
+                    Toast.makeText(MainActivity5.this, "got it", Toast.LENGTH_SHORT).show();
+                }
 
                 Intent intent = new Intent(MainActivity5.this,MainActivity6.class);
+
                 intent.putExtra("keyCollege",college1);
                 intent.putExtra("keyDate",date1);
                 intent.putExtra("keyLocation",location1);
                 intent.putExtra("keyComplaint",complaint1);
+                intent.putExtra("keyName",name);
+                intent.putExtra("keySurname",surname);
+                intent.putExtra("keyEmail",email);
+                intent.putExtra("keyPassword",password);
+                intent.putExtra("keyPhone",phone);
                 startActivity(intent);
             }
         });

@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class MainActivity4 extends AppCompatActivity {
 
@@ -16,7 +17,7 @@ public class MainActivity4 extends AppCompatActivity {
     RadioButton selectedRadioButton;
 
     Button btn;
-    EditText name,surname,email,password;
+    EditText name,surname,email,password,phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class MainActivity4 extends AppCompatActivity {
         surname = findViewById(R.id.editTextTextPersonName5);
         email = findViewById(R.id.editTextTextPersonName6);
         password = findViewById(R.id.editTextTextPersonName7);
+        phone = findViewById(R.id.editTextTextPersonName9);
 
         //Sign up button
         btn = findViewById(R.id.button5);
@@ -46,12 +48,19 @@ public class MainActivity4 extends AppCompatActivity {
                 String surname1 = surname.getText().toString();
                 String email1 = email.getText().toString();
                 String password1 = password.getText().toString();
+                String phone1 = phone.getText().toString();
+
+                //testing
+                if(name1.equals("test")==true){
+                    Toast.makeText(MainActivity4.this, "got", Toast.LENGTH_SHORT).show();
+                }
 
                 Intent intent = new Intent(MainActivity4.this,MainActivity8.class);
                 intent.putExtra("keyName",name1);
                 intent.putExtra("keySurname",surname1);
                 intent.putExtra("keyEmail",email1);
                 intent.putExtra("keyPassword",password1);
+                intent.putExtra("keyPhone",phone1);
                 startActivity(intent);
             }
         });
