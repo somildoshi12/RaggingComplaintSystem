@@ -40,6 +40,9 @@ public class MainActivity9 extends AppCompatActivity {
         location0.setText(location1);
         String complaint1 = getIntent().getStringExtra("keyComplaint");
 
+        String email = getIntent().getStringExtra("keyEmail");
+        String password = getIntent().getStringExtra("keyPassword");
+
         complaint = findViewById(R.id.textView39);
         complaint.setMovementMethod(new ScrollingMovementMethod());
         complaint.setText(complaint1);
@@ -61,8 +64,8 @@ public class MainActivity9 extends AppCompatActivity {
                 intent.putExtra("keyDate",date1);
                 intent.putExtra("keyLocation",location1);
                 intent.putExtra("keyComplaint",complaint1);
-                /*intent.putExtra("keyEmail",email);
-                intent.putExtra("keyPassword",password);*/
+                intent.putExtra("keyEmail",email);
+                intent.putExtra("keyPassword",password);
                 intent.putExtra("keyPhone",phone);
 
                 startActivity(intent);

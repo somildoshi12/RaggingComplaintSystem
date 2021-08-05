@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 public class MainActivity7 extends AppCompatActivity {
 
-    Button dash,web;
     TextView complaint,name0,date0,college0,location0,phone0;
 
     @Override
@@ -41,13 +40,12 @@ public class MainActivity7 extends AppCompatActivity {
         location0.setText(location1);
         String complaint1 = getIntent().getStringExtra("keyComplaint");
 
+        String email = getIntent().getStringExtra("keyEmail");
+        String password = getIntent().getStringExtra("keyPassword");
+
         complaint = findViewById(R.id.textView39);
         complaint.setMovementMethod(new ScrollingMovementMethod());
         complaint.setText(complaint1);
-
-
-        /*dash = findViewById(R.id.button12);
-        web = findViewById(R.id.button13);*/
 
 
         Handler handler = new Handler();
@@ -65,10 +63,13 @@ public class MainActivity7 extends AppCompatActivity {
                 intent.putExtra("keyComplaint",complaint1);
                 intent.putExtra("keyPhone",phone);
 
+                intent.putExtra("keyEmail",email);
+                intent.putExtra("keyPassword",password);
+
                 startActivity(intent);
                 finish();
             }
-        },5000);
+        },4000);
 
     }
 }

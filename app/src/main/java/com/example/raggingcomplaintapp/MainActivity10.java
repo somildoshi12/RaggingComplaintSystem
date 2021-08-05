@@ -28,15 +28,6 @@ public class MainActivity10 extends AppCompatActivity {
         displayname = findViewById(R.id.textView14);
         displayname.setText("Hi, "+name+" !");
 
-        btn_logout = findViewById(R.id.button6);
-        btn_logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(MainActivity10.this,MainActivity2.class);
-                startActivity(intent);
-            }
-        });
 
         btn_complaint = findViewById(R.id.button8);
         btn_complaint.setOnClickListener(new View.OnClickListener() {
@@ -55,16 +46,16 @@ public class MainActivity10 extends AppCompatActivity {
             }
         });
 
+        String college1 = getIntent().getStringExtra("keyCollege");
+        String date1 = getIntent().getStringExtra("keyDate");
+        String location1 = getIntent().getStringExtra("keyLocation");
+        String complaint1 = getIntent().getStringExtra("keyComplaint");
+
 
         btn_status = findViewById(R.id.button9);
         btn_status.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String college1 = getIntent().getStringExtra("keyCollege");
-                String date1 = getIntent().getStringExtra("keyDate");
-                String location1 = getIntent().getStringExtra("keyLocation");
-                String complaint1 = getIntent().getStringExtra("keyComplaint");
 
                 Intent intent = new Intent(MainActivity10.this,MainActivity9.class);
 
@@ -74,8 +65,29 @@ public class MainActivity10 extends AppCompatActivity {
                 intent.putExtra("keyDate",date1);
                 intent.putExtra("keyLocation",location1);
                 intent.putExtra("keyComplaint",complaint1);
-                /*intent.putExtra("keyEmail",email);
-                intent.putExtra("keyPassword",password);*/
+                intent.putExtra("keyEmail",email);
+                intent.putExtra("keyPassword",password);
+                intent.putExtra("keyPhone",phone);
+
+                startActivity(intent);
+            }
+        });
+
+        btn_logout = findViewById(R.id.button6);
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity10.this,MainActivity2.class);
+
+                intent.putExtra("keyCollege",college1);
+                intent.putExtra("keyDate",date1);
+                intent.putExtra("keyLocation",location1);
+                intent.putExtra("keyComplaint",complaint1);
+                intent.putExtra("keyName",name);
+                intent.putExtra("keySurname",surname);
+                intent.putExtra("keyEmail",email);
+                intent.putExtra("keyPassword",password);
                 intent.putExtra("keyPhone",phone);
 
                 startActivity(intent);

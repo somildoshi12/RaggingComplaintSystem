@@ -34,6 +34,13 @@ public class MainActivity6 extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(MainActivity6.this,MainActivity2.class);
+
+                intent.putExtra("keyName",name);
+                intent.putExtra("keySurname",surname);
+                intent.putExtra("keyEmail",email);
+                intent.putExtra("keyPassword",password);
+                intent.putExtra("keyPhone",phone);
+
                 startActivity(intent);
             }
         });
@@ -74,8 +81,8 @@ public class MainActivity6 extends AppCompatActivity {
                 intent.putExtra("keyDate",date1);
                 intent.putExtra("keyLocation",location1);
                 intent.putExtra("keyComplaint",complaint1);
-                /*intent.putExtra("keyEmail",email);
-                intent.putExtra("keyPassword",password);*/
+                intent.putExtra("keyEmail",email);
+                intent.putExtra("keyPassword",password);
                 intent.putExtra("keyPhone",phone);
 
                 startActivity(intent);

@@ -16,6 +16,17 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        String name = getIntent().getStringExtra("keyName");
+        String surname = getIntent().getStringExtra("keySurname");
+        String email = getIntent().getStringExtra("keyEmail");
+        String password = getIntent().getStringExtra("keyPassword");
+        String phone = getIntent().getStringExtra("keyPhone");
+
+        String college1 = getIntent().getStringExtra("keyCollege");
+        String date1 = getIntent().getStringExtra("keyDate");
+        String location1 = getIntent().getStringExtra("keyLocation");
+        String complaint1 = getIntent().getStringExtra("keyComplaint");
+
 
         btn_login = findViewById(R.id.button3);
         btn_login.setOnClickListener(new View.OnClickListener() {
@@ -23,6 +34,18 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(MainActivity2.this,MainActivity8.class);
+
+                intent.putExtra("keyEmail",email);
+                intent.putExtra("keyPassword",password);
+                intent.putExtra("keyName",name);
+                intent.putExtra("keySurname",surname);
+                intent.putExtra("keyPhone",phone);
+                intent.putExtra("keyCollege",college1);
+                intent.putExtra("keyDate",date1);
+                intent.putExtra("keyLocation",location1);
+                intent.putExtra("keyComplaint",complaint1);
+
+
                 startActivity(intent);
             }
         });
