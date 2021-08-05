@@ -46,18 +46,8 @@ public class MainActivity7 extends AppCompatActivity {
         complaint.setText(complaint1);
 
 
-        dash = findViewById(R.id.button12);
-        web = findViewById(R.id.button13);
-
-        web.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://www.antiragging.in/"));
-                startActivity(intent);
-            }
-        });
+        /*dash = findViewById(R.id.button12);
+        web = findViewById(R.id.button13);*/
 
 
         Handler handler = new Handler();
@@ -73,14 +63,12 @@ public class MainActivity7 extends AppCompatActivity {
                 intent.putExtra("keyDate",date1);
                 intent.putExtra("keyLocation",location1);
                 intent.putExtra("keyComplaint",complaint1);
-                /*intent.putExtra("keyEmail",email);
-                intent.putExtra("keyPassword",password);*/
                 intent.putExtra("keyPhone",phone);
 
                 startActivity(intent);
                 finish();
             }
-        },7500);
+        },5000);
 
     }
 }

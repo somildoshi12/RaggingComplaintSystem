@@ -42,7 +42,7 @@ public class MainActivity5 extends AppCompatActivity {
                 String phone = getIntent().getStringExtra("keyPhone");
 
 
-                Intent intent = new Intent(MainActivity5.this,MainActivity6.class);
+                Intent intent = new Intent(MainActivity5.this,MainActivity3.class);
 
                 intent.putExtra("keyCollege",college1);
                 intent.putExtra("keyDate",date1);
