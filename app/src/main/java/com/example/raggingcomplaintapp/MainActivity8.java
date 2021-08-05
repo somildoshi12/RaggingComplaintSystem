@@ -54,8 +54,6 @@ public class MainActivity8 extends AppCompatActivity {
 
                 if(user0.equals(email) && pass0.equals(password)){
 
-                    Toast.makeText(MainActivity8.this, "Correct", Toast.LENGTH_SHORT).show();
-
                     Intent intent = new Intent(MainActivity8.this,MainActivity6.class);
 
                     intent.putExtra("keyName",name);
