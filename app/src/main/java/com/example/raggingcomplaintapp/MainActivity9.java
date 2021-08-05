@@ -5,13 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity7 extends AppCompatActivity {
+public class MainActivity9 extends AppCompatActivity {
 
     Button dash,web;
     TextView complaint,name0,date0,college0,location0,phone0;
@@ -19,7 +18,7 @@ public class MainActivity7 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main7);
+        setContentView(R.layout.activity_main9);
 
         name0 = findViewById(R.id.textView28);
         date0 = findViewById(R.id.textView35);
@@ -49,33 +48,13 @@ public class MainActivity7 extends AppCompatActivity {
         dash = findViewById(R.id.button12);
         web = findViewById(R.id.button13);
 
-        /*dash.setOnClickListener(new View.OnClickListener() {
+        dash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity7.this,MainActivity6.class);
-                startActivity(intent);
-            }
-        });*/
+                Intent intent = new Intent(MainActivity9.this,MainActivity6.class);
 
-        web.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://www.antiragging.in/"));
-                startActivity(intent);
-            }
-        });
-
-
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-
-                Intent intent = new Intent(MainActivity7.this,MainActivity9.class);
-
+                //test
                 intent.putExtra("keyName",name);
                 intent.putExtra("keySurname",surname);
                 intent.putExtra("keyCollege",college1);
@@ -87,9 +66,18 @@ public class MainActivity7 extends AppCompatActivity {
                 intent.putExtra("keyPhone",phone);
 
                 startActivity(intent);
-                finish();
             }
-        },3000);
+        });
+
+        web.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://www.antiragging.in/"));
+                startActivity(intent);
+            }
+        });
 
     }
 }

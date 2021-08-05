@@ -69,8 +69,8 @@ public class MainActivity6 extends AppCompatActivity {
                 intent.putExtra("keyDate",date1);
                 intent.putExtra("keyLocation",location1);
                 intent.putExtra("keyComplaint",complaint1);
-                intent.putExtra("keyEmail",email);
-                intent.putExtra("keyPassword",password);
+                /*intent.putExtra("keyEmail",email);
+                intent.putExtra("keyPassword",password);*/
                 intent.putExtra("keyPhone",phone);
 
                 startActivity(intent);
