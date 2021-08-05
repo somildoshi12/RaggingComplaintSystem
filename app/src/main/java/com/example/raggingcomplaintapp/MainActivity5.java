@@ -3,8 +3,10 @@ package com.example.raggingcomplaintapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -13,11 +15,17 @@ public class MainActivity5 extends AppCompatActivity {
 
     Button btn;
     EditText college,date,location,complaint;
+    Window window;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main5);
+
+        if(Build.VERSION.SDK_INT >= 21) {
+            window = this.getWindow();
+            window.setStatusBarColor(this.getResources().getColor(R.color.black));
+        }
 
         //fetch data
         college = findViewById(R.id.editTextTextPersonName3);

@@ -2,19 +2,27 @@ package com.example.raggingcomplaintapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 
 public class MainActivity2 extends AppCompatActivity {
 
     Button btn_login,btn_signup;
+    Window window;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        if(Build.VERSION.SDK_INT >= 21) {
+            window = this.getWindow();
+            window.setStatusBarColor(this.getResources().getColor(R.color.black));
+        }
 
         String name = getIntent().getStringExtra("keyName");
         String surname = getIntent().getStringExtra("keySurname");

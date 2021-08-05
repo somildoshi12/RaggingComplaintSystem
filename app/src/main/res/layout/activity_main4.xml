@@ -11,7 +11,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/signup_inner_rectangle"
+        android:background="@drawable/bg_register1"
         android:orientation="vertical"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
@@ -240,7 +240,8 @@
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
                     android:text="Male"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
 
                 <RadioButton
                     android:id="@+id/radioButton5"
@@ -250,7 +251,8 @@
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
                     android:text="Female"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
 
                 <RadioButton
                     android:id="@+id/radioButton6"
@@ -260,7 +262,8 @@
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
                     android:text="Others"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
 
             </RadioGroup>
 

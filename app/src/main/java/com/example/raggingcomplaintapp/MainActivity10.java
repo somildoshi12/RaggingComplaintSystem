@@ -3,13 +3,17 @@ package com.example.raggingcomplaintapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity10 extends AppCompatActivity {
+
+    Window window;
     Button btn_logout,btn_complaint,btn_status;
     TextView displayname;
 
@@ -17,6 +21,11 @@ public class MainActivity10 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main10);
+
+        if(Build.VERSION.SDK_INT >= 21) {
+            window = this.getWindow();
+            window.setStatusBarColor(this.getResources().getColor(R.color.black));
+        }
 
         //getting data
         String name = getIntent().getStringExtra("keyName");
