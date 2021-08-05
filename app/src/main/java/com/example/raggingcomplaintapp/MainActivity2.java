@@ -20,6 +20,7 @@ public class MainActivity2 extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(MainActivity2.this,MainActivity7.class);
                 startActivity(intent);
             }
@@ -29,6 +30,7 @@ public class MainActivity2 extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(MainActivity2.this,MainActivity8.class);
                 startActivity(intent);
             }
@@ -38,6 +40,7 @@ public class MainActivity2 extends AppCompatActivity {
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(MainActivity2.this,MainActivity4.class);
                 startActivity(intent);
             }

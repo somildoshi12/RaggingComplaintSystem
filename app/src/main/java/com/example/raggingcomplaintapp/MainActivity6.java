@@ -19,10 +19,6 @@ public class MainActivity6 extends AppCompatActivity {
         //getting data
         String name = getIntent().getStringExtra("keyName");
         String surname = getIntent().getStringExtra("keySurname");
-        /*String college1 = getIntent().getStringExtra("keyCollege");
-        String date1 = getIntent().getStringExtra("keyDate");
-        String location1 = getIntent().getStringExtra("keyLocation");
-        String complaint1 = getIntent().getStringExtra("keyComplaint");*/
         String email = getIntent().getStringExtra("keyEmail");
         String password = getIntent().getStringExtra("keyPassword");
         String phone = getIntent().getStringExtra("keyPhone");
@@ -31,6 +27,7 @@ public class MainActivity6 extends AppCompatActivity {
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(MainActivity6.this,MainActivity2.class);
                 startActivity(intent);
             }
@@ -40,37 +37,32 @@ public class MainActivity6 extends AppCompatActivity {
         btn_complaint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(MainActivity6.this,MainActivity5.class);
+
                 intent.putExtra("keyName",name);
                 intent.putExtra("keySurname",surname);
                 intent.putExtra("keyEmail",email);
                 intent.putExtra("keyPassword",password);
                 intent.putExtra("keyPhone",phone);
+
                 startActivity(intent);
             }
         });
 
 
-
-        //test
-        if(name.equals("test")==true){
-            Toast.makeText(MainActivity6.this, "got", Toast.LENGTH_SHORT).show();
-        }
-
         btn_status = findViewById(R.id.button9);
         btn_status.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String college1 = getIntent().getStringExtra("keyCollege");
                 String date1 = getIntent().getStringExtra("keyDate");
                 String location1 = getIntent().getStringExtra("keyLocation");
                 String complaint1 = getIntent().getStringExtra("keyComplaint");
 
-                if(date1.equals("test")==true){
-                    Toast.makeText(MainActivity6.this, "yeah", Toast.LENGTH_SHORT).show();
-                }
-
                 Intent intent = new Intent(MainActivity6.this,MainActivity7.class);
+
                 intent.putExtra("keyName",name);
                 intent.putExtra("keySurname",surname);
                 intent.putExtra("keyCollege",college1);
@@ -80,6 +72,7 @@ public class MainActivity6 extends AppCompatActivity {
                 intent.putExtra("keyEmail",email);
                 intent.putExtra("keyPassword",password);
                 intent.putExtra("keyPhone",phone);
+
                 startActivity(intent);
             }
         });

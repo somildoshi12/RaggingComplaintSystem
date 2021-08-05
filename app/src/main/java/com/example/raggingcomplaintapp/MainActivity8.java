@@ -24,21 +24,20 @@ public class MainActivity8 extends AppCompatActivity {
         String password = getIntent().getStringExtra("keyPassword");
         String phone = getIntent().getStringExtra("keyPhone");
 
-        //test
-        if(name.equals("test")==true){
-            Toast.makeText(MainActivity8.this, "got", Toast.LENGTH_SHORT).show();
-        }
 
         btn_login = findViewById(R.id.button4);
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(MainActivity8.this,MainActivity6.class);
+
                 intent.putExtra("keyName",name);
                 intent.putExtra("keySurname",surname);
                 intent.putExtra("keyEmail",email);
                 intent.putExtra("keyPassword",password);
                 intent.putExtra("keyPhone",phone);
+
                 startActivity(intent);
             }
         });

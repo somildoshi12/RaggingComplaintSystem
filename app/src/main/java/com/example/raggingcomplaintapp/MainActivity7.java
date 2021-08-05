@@ -24,16 +24,12 @@ public class MainActivity7 extends AppCompatActivity {
         date0 = findViewById(R.id.textView35);
         college0 = findViewById(R.id.textView33);
         location0 = findViewById(R.id.textView37);
-        //complaint0 = findViewById(R.id.textView39);
         phone0 = findViewById(R.id.textView30);
 
         //getting data
         String name = getIntent().getStringExtra("keyName");
         String surname = getIntent().getStringExtra("keySurname");
         name0.setText(name+" "+surname);
-        //String complaint1 = getIntent().getStringExtra("keyComplaint");
-        /*String email = getIntent().getStringExtra("keyEmail");
-        String password = getIntent().getStringExtra("keyPassword");*/
         String phone = getIntent().getStringExtra("keyPhone");
         phone0.setText(phone);
         String college1 = getIntent().getStringExtra("keyCollege");
@@ -44,12 +40,18 @@ public class MainActivity7 extends AppCompatActivity {
         location0.setText(location1);
         String complaint1 = getIntent().getStringExtra("keyComplaint");
 
+        complaint = findViewById(R.id.textView39);
+        complaint.setMovementMethod(new ScrollingMovementMethod());
+        complaint.setText(complaint1);
+
 
         dash = findViewById(R.id.button12);
         web = findViewById(R.id.button13);
+
         dash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(MainActivity7.this,MainActivity6.class);
                 startActivity(intent);
             }
@@ -58,15 +60,12 @@ public class MainActivity7 extends AppCompatActivity {
         web.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("https://www.antiragging.in/"));
                 startActivity(intent);
             }
         });
-
-        complaint = findViewById(R.id.textView39);
-        complaint.setMovementMethod(new ScrollingMovementMethod());
-        complaint.setText(complaint1);
 
     }
 }

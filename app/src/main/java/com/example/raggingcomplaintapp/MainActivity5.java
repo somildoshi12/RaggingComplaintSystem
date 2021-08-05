@@ -41,10 +41,6 @@ public class MainActivity5 extends AppCompatActivity {
                 String password = getIntent().getStringExtra("keyPassword");
                 String phone = getIntent().getStringExtra("keyPhone");
 
-                //test
-                if(date1.equals("test")==true && location1.equals("test")==true && college1.equals("test")==true){
-                    Toast.makeText(MainActivity5.this, "got it", Toast.LENGTH_SHORT).show();
-                }
 
                 Intent intent = new Intent(MainActivity5.this,MainActivity6.class);
 
@@ -57,6 +53,7 @@ public class MainActivity5 extends AppCompatActivity {
                 intent.putExtra("keyEmail",email);
                 intent.putExtra("keyPassword",password);
                 intent.putExtra("keyPhone",phone);
+
                 startActivity(intent);
             }
         });
