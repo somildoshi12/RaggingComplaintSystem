@@ -9,14 +9,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity6 extends AppCompatActivity {
+public class MainActivity10 extends AppCompatActivity {
     Button btn_logout,btn_complaint,btn_status;
     TextView displayname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main6);
+        setContentView(R.layout.activity_main10);
 
         //getting data
         String name = getIntent().getStringExtra("keyName");
@@ -33,7 +33,7 @@ public class MainActivity6 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity6.this,MainActivity2.class);
+                Intent intent = new Intent(MainActivity10.this,MainActivity2.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +43,7 @@ public class MainActivity6 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity6.this,MainActivity5.class);
+                Intent intent = new Intent(MainActivity10.this,MainActivity5.class);
 
                 intent.putExtra("keyName",name);
                 intent.putExtra("keySurname",surname);
@@ -66,7 +66,7 @@ public class MainActivity6 extends AppCompatActivity {
                 String location1 = getIntent().getStringExtra("keyLocation");
                 String complaint1 = getIntent().getStringExtra("keyComplaint");
 
-                Intent intent = new Intent(MainActivity6.this,MainActivity7.class);
+                Intent intent = new Intent(MainActivity10.this,MainActivity9.class);
 
                 intent.putExtra("keyName",name);
                 intent.putExtra("keySurname",surname);

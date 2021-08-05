@@ -49,15 +49,6 @@ public class MainActivity7 extends AppCompatActivity {
         dash = findViewById(R.id.button12);
         web = findViewById(R.id.button13);
 
-        /*dash.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(MainActivity7.this,MainActivity6.class);
-                startActivity(intent);
-            }
-        });*/
-
         web.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,7 +80,7 @@ public class MainActivity7 extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },3000);
+        },7500);
 
     }
 }

@@ -52,7 +52,7 @@ public class MainActivity9 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity9.this,MainActivity6.class);
+                Intent intent = new Intent(MainActivity9.this,MainActivity10.class);
 
                 //test
                 intent.putExtra("keyName",name);
